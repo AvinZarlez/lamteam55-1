@@ -256,6 +256,8 @@ module.exports={
                         break;
                 }
                 botPointer=await this.MoveBotPointer(myBot,botPointer,result,UserActivityResults,state);
+                console.log(botPointer);
+                await this.RenderConversationThread(context, myBot,state);
                 break;
             case "MESSAGE":
                 await context.sendActivity(messageToDisplay, messageToSpeak, 'expectingInput');
