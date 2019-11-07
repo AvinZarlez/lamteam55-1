@@ -1,4 +1,5 @@
 const { QnAMaker } = require('botbuilder-ai');
+const request = require("request");
 
 module.exports={
 
@@ -209,7 +210,7 @@ module.exports={
         var UserActivityResults=await state.getUserActivityResults();
         var botPointer = await state.getBotPointer();
         var currentThread=myBot[botPointer];
-        var messageToDisplay=currentThread.text;
+        var messageToDisplay=currentThread.text+"";
         messageToDisplay=this.replaceVars(messageToDisplay,UserActivityResults);
         this.log("THREAD:" + currentThread.type);
         var messageToSpeak=messageToDisplay;
@@ -233,7 +234,6 @@ module.exports={
                 var parCleaned=this.replaceVars(currentThread.parPar,UserActivityResults);
                 var result="";
 
-                console.log("API CALL");
                 console.log(currentThread.parAPI);
 
                 request.post(
