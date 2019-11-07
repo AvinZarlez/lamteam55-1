@@ -236,6 +236,20 @@ module.exports={
                 console.log("API CALL");
                 console.log(currentThread.parAPI);
 
+                request.post(
+                    currentThread.parAPI,
+                    {
+                      json: JSON.stringify(UserActivityResults)
+                    },
+                    (error, res, body) => {
+                      if (error) {
+                        console.error(error)
+                        return
+                      }
+                      console.log(`statusCode: ${res.statusCode}`)
+                      console.log(body)
+                    }
+                  )
 
                 switch (currentThread.parAPO) {
                     case "POST":
