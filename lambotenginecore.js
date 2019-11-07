@@ -232,7 +232,15 @@ module.exports={
             case "API":
                 var parCleaned=this.replaceVars(currentThread.parPar,UserActivityResults);
                 var result="";
+
+                console.log("API CALL");
+                console.log(currentThread.parAPI);
+
+
                 switch (currentThread.parAPO) {
+                    case "POST":
+                        console.log("POST");
+                        break;
                     case "MessageContent":
                         //DISPLAY THE MESSAGE
                         messageToDisplay=this.executeFunctionByName(currentThread.parAPI,global,parCleaned);

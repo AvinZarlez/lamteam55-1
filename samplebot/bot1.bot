@@ -1,18 +1,49 @@
 [
 {
     "key":1,
+    "parVar":"",
+    "type":"START",
+    "text":"HERE WE GO",
+    "next":[{"to":2,"text":""}]
+},
+{
+    "key":2,
+    "parAPI":"http://something",
+    "type":"API",
+    "parAPO":"POST",
+    "next":[{"to":-1,"text":""}]
+},
+
+{
+    "key":-1,
     "parVar":"A1",
     "type":"INPUT",
     "messageType":"input",
     "text":"2. Work station clearance performed as per the related work procedure.",
-    "next":[]
+    "next":[{"to":-2,"text":""}]
 },
 {
-    "key":2,
+    "key":-2,
     "parVar":"A2",
     "type":"CHOICE",
     "messageType":"singleConfirm",
     "text":"3. Equipment pre-cleaning steps performed.",
-    "next":[{"to":3,"text":"Yes"},{"to":3,"text":"No"}]
+    "next":[{"to":-3,"text":"Yes"},{"to":4,"text":"No"}]
+},
+{
+    "key":-3,
+    "parVar":"A3",
+    "type":"CHOICE",
+    "messageType":"multipleConfirm",
+    "text":"Waiting for confirmation",
+    "next":[{"to":-4,"text":"Yes"},{"to":-4,"text":"No"}]
+},
+{
+    "key":4,
+    "parVar":"A4",
+    "type":"CHOICE",
+    "messageType":"singleConfirm",
+    "text":"5. Initiate Continuous Monitoring. Grade A and Grade B settle plates opened and steps for performing Met One Operations are performed.",
+    "next":[{"to":-1,"text":""}]
 }
 ]
