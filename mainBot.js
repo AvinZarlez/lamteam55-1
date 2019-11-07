@@ -31,8 +31,7 @@ class mainBot {
 		var userActivityResults=await this.state.getUserActivityResults();
       
 		if (context.activity.type === 'conversationUpdate' && context.activity.membersAdded[0].id !== 'botid') {
-			await context.sendActivity(`## Welcome to the Designer Bot!\n\nCurrent bot: ` + botName.replace(".bot","") + "\n\n"  + 
-				"Use #BOT <name> to change, #DATA to display collected data");
+			await context.sendActivity("### Welcome!");
 		} else
 		if (context.activity.type === 'message') {
 			await context.sendActivity({ type: 'typing' });
