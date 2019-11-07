@@ -1,0 +1,72 @@
+[
+{
+    "key":1,
+    "parVar":"A1",
+    "type":"INPUT",
+            "messageType": "input",
+            "text": "2. Work station clearance performed as per the related work procedure.",
+    "next":[]
+        },
+        {
+    "key":2,
+    "parVar":"A2",
+    "type":"CHOICE",
+            "messageType": "singleConfirm",
+            "text": "3. Equipment pre-cleaning steps performed.",
+"next":[{"to":3,"text":"Yes"},{"to":3,"text":"No"}]
+        },
+        {
+    "key":3,
+    "parVar":"A3",
+    "type":"CHOICE",
+            "messageType": "multipleConfirm",
+            "displayText": "Waiting for confirmation",
+"next":[{"to":4,"text":"Yes"},{"to":4,"text":"No"}]
+        },
+        {
+    "key":4,
+    "parVar":"A4",
+    "type":"CHOICE",
+            "messageType": "singleConfirm",
+            "displayText": "5. Initiate Continuous Monitoring. Grade A and Grade B settle plates opened and steps for performing Met One Operations are performed.",
+        },
+        {
+    "key":5,
+    "parVar":"A5",
+    "type":"CHOICE",
+            "messageType": "singleConfirm",
+            "displayText": "6. Perform CALC_D1_VECT_TRANS_C Calculations in LIMS.",
+        },
+        {
+        "key":6,
+    "parVar":"A6",
+    "type":"CHOICE",
+            "messageType": "singleConfirm",
+            "displayText": "8. Perform Final Confirmation on Phase 0100 using transaction code COR6N in SAP.",
+        },
+        {
+        "key":7,
+    "parVar":"A7",
+    "type":"INPUT",
+            "messageType": "input",
+            "displayText": "9. Record and verify the number of culture bags.",
+            "inputType": "number",
+    "next":[]
+        },
+        {
+    "key":8,
+    "parVar":"A8",
+    "type":"INPUT",
+            "displayText": "9a. Entering a Date.",
+            "inputType": "date",
+    "next":[]
+        },
+        {
+    "key":9,
+    "parVar":"A9",
+    "type":"INPUT",
+            "messageType": "singleConfirm",
+            "displayText": "11. Perform Partial Confirmation on Phase 0120 using transaction code COR6N",
+    "next":[]
+        }
+]
